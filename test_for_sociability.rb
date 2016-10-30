@@ -50,18 +50,12 @@ answers = yes_answers + sometimes_answers
 
 puts "\nВаш результат теста (баллов - #{answers}):"
 
-if (answers >= 30)
-  puts results[0]
-elsif (answers >= 25)
-  puts results[1]
-elsif (answers >= 19)
-  puts results[2]
-elsif (answers >= 14)
-  puts results[3]
-elsif (answers >= 9)
-  puts results[4]
-elsif (answers >= 4)
-  puts results[5]
-else
-  puts results[6]
+puts case answers
+when 30..32 then results[0]
+when 25..29 then results[1]
+when 19..24 then results[2]
+when 14..18 then results[3]
+when 9..13 then results[4]
+when 4..8 then results[5]
+when 0..3 then results[6]
 end
